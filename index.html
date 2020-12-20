@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Home Oscars Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Organització de clubs de cinema virtual" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div  id="IniciaSessio">
+            <a href="" class="button">Inicia sessió</a>
+        </div>   
+        <figure>
+            <a href="index.html"><img id="isologo" src="img/oscarsclub-isologo.png" alt="Icona que mostre un virus amb la paraula infoCOVID"></a>
+            <figcaption><a href="index.html"><span class="bold">oscars</span><span class="cursiva">club</span></a>
+            </figcaption>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="clubs-tematics.html">CLUBS TEMÀTICS</a></li>
+                <li><a href="sessions-2020.html">SESSIONS 2020</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Què és Oscars Club?</h1>
+            <div class="center">
+                <p class="maxwidth">Oscars Club organitza clubs virtuals de cinema de diversos gèneres i en diferents
+                    llengües, per als amants del cinema
+                    que vulguin compartir reflexions i debatre sobre les pel·lícules que els interessen sense necessitat
+                    d'haver d'anar a un
+                    espai físic.</p>
+            </div>
+        </section>
+        <section>
+            <h1>Com funciona?</h1>
+            <diV id="comfunciona">
+                <figure>
+                    <img src="img/howto-register.png" alt="Com registrarse">
+                    <figcaption>Registra't</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/howto-club.png" alt="Com insciure't">
+                    <figcaption>Inscriu-te en un club de cinema</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/howto-film.png" alt="Com triar una pel·lícula">
+                    <figcaption>Tria una pel·lícula</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/howto-speech.png" alt="Com Gaudir del debat">
+                    <figcaption>Gaudeix del debat</figcaption>
+                </figure>
+            </diV>
+        </section>
+        <section>
+            <h1>Uneix-te al club</h1>
+            <div id="formulari">
+                <div>
+                    <p>Estem mirant la teva propera pel·lícula preferida.</p>
+                    <p>T'ho perdràs?</p>
+                </diV>
+                <div>
+                    <form id="form1">
+                        <input type="text" id="nom" placeholder="Nom"  title="Camp obligatori. Llargaria entre 2 i 64 caràcters. Caràcters permesos: lletres a-z, _, -, '" required minlength="2" maxlength="64" pattern="([a-zA-Z_\-áéíóóàèìòù'])*">
+                        <input type="email" id="email" placeholder="Correu electrònic"  title="Camp obligatori en format email" required>
+                        <input type="password" id="password" placeholder="Contrasenya"  title="Camp obigatori" required minlength="8" maxlength="18">
+                        <div class="lpd">
+                            <p>INFORMACIÓ SOBRE PROTECCIÓ DE DADES DE OSCARS CLUB. Finalitats: recollida de dades per a
+                                la inscripció com a soci de
+                                l'interessat. Legitimació: Consentiment de l'interessat. Destinataris: No estan
+                                previstes cessions de dades a tercers,
+                                excepte obligació legal. Drets: Pot retirar el seu consentiment en qualsevol moment,
+                                així com accedir, rectificar,
+                                suprimir les seves dades i altres drets dirigint-se a oscarsclub@oscarsclub.org.
+                                Informació Addicional: Pot ampliar la
+                                informació en l'enllaç <a href="">d'Avís Legal</a> i <a href="">Política de
+                                    privacitat</a>.</p>
+                            <input type="checkbox" id="lpd"><label for="lpd">He llegit i accepto la política de
+                                privacitat</label>                               
+                        </div>
+                        <button type="submit" form="form1">
+                             REGISTRA'M
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li><a href="">Sobre nosaltres</a></li>
+                <li><a href="">Avís legal</a></li>
+                <li><a href="">Política de privacitat</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Youtube</a></li>
+            </ul>
+        </div>
+        <div>
+            <p>© 2020 Pedro Tous Durán</p>
+            <p>Icones <a href="https://www.flaticon.com">flaticon.com</a></p>
+            <p>Imatges <a href="https://unsplash.com">unsplash.com</a></p>
+        </div>
+        <div id="subir">
+            <p><a href="#top">&xwedge;</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
