@@ -1,8 +1,24 @@
+/* CSS para la versión móvil. Movile First*/
+
+/* Genéricos Para toda la web*/
+/*..................................................................*/
 body {
     margin: 0;
 }
 
+/*Enlaces por defecto*/
+a {
+    color: rgb(28, 28, 28);
+    text-decoration: none;
+}
+
+a img:hover{
+    opacity: 0.5;
+}
+
+/*Definición del header*/
 header {
+/* Display flex en columnas para poder centrar los items*/    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,20 +28,72 @@ header {
     padding: 0 1rem 3rem 1rem;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    background-color: rgb(67, 58, 68);
-    color: rgb(255, 255, 255);
-    padding: 0 1rem 3rem 1rem;
-    text-align: center;
+/*Figure OscarsClub con display flex para que su figcaption quede alienado a la derecha y centrado verticalnte con la imagen*/
+header figure {
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 
+/*Fijamos el tamaño de la imagen de la cabecera*/
+header figure img {
+  width: 150%;
+  max-width: 100%;
+}
+
+/*Aspecto del texto "oscarsClub"*/
+header figcaption {
+  font-family: 'Noto Serif', serif;    
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+
+/*oscars en negrita*/
+header figcaption .bold {
+    font-weight: 700;
+}
+
+/*club en cursiva y color rojo*/
+header figcaption .cursiva {
+    font-style: italic;
+    color: rgb(155, 23, 0);
+}
+
+/*Cambio de opacidad al pasar cursor sobre oscarsclub*/
+header a:hover .bold {
+    color: rgba(28, 28, 28, 0.5);
+}
+
+header a:hover .cursiva {
+    color: rgba(155, 23, 0, 0.5);
+}
+
+/*Estilo por defecto de elementos de navegación*/
+nav ul {
+    padding: 0;
+    margin: 1rem 0
+}
+
+nav li {
+    text-align: center;
+	list-style: none;
+    font-weight: 700;
+    margin: .5rem 0;
+}
+
+nav a:active {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: rgba(28, 28, 28, 0.5);
+}
+
+
+/*Estilos generales para el elemento main*/
 main {
-/*    display: flex;
-    flex-direction: column;*/
+/*  display grid con una columna para centrar los elementos */
     display: grid;
     grid-template-columns: 1fr;    
     align-items: center;
@@ -35,50 +103,90 @@ main {
     padding: 0 1rem 3rem 1rem;
 }
 
-#comfunciona {
+
+/*Estilos para el footer*/
+footer {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(67, 58, 68);
+    color: rgb(255, 255, 255);
+    padding: 0 1rem 3rem 1rem;
+    /*Texto centrado en la versión móvil*/
     text-align: center;
 }
 
-#comfunciona img{
-    width: 12rem;
+footer {
+    padding-top: 2rem;
+    font-size: 0.8rem;
 }
 
-main a {
-    color:rgb(155, 23, 0)
+/*Estilos de párrafos*/
+footer p {
+    font-size: 0.8rem;
+    margin: 0.4rem 0;
 }
 
-main a:hover {
-    color:rgba(155, 23, 0, 0.5)
+/*Listas desordenadas sin estilo. Ajustamos margins y paddings*/
+footer ul {
+    list-style: none;
+    margin: 2rem 0 2rem 0;
+    padding-left: 0;
 }
 
+footer li {
+    margin: 0.3rem 0;
+}
+
+/*Enlaces del footer*/
+footer a {
+ color: rgb(255, 255, 255);    
+}
+
+footer a:hover {
+ color: rgb(155, 23, 0);    
+}
+
+/*Estilo para el texto "^" que posiciona la página al inicio*/
+#subir {
+    text-align: right; 
+    margin-right: 1rem;
+}
+
+
+/*Estilo para cabeceras de secciones*/
 section h1 {
     text-align: center;
 }
 
-
-#llistaclubs figure {
-    margin: 1rem 0;
+/*Estilo para listas descriptivas*/
+dt {
+    font-weight: 700;
+    border-width: 0.1rem;
+    border-color:  rgb(28, 28, 28);
+    border-style: solid hidden hidden;
 }
 
-#llistaclubs img {
-    max-width: 100%;
+dd p {
+   margin: 0 0.3rem; 
+}
+
+/*Clases para estilos especiales*/
+/*Tamaño de linea grande. Se utiliza en el primer parrafo de sessions-2020*/
+.extra-height {
+    line-height: 1.5rem;
+}
+
+/* Alineación del texto centrada*/
+.center {
+    text-align: center;
+}
+
+/*Elemento del menú de navegación del header seleccionado. Página actual*/
+.selected {
+    font-style: italic;
 }
 
 
-#formulari {
-    text-align: left;
-    font-size: 1.3rem;
-}
-
-/*
-#form1 label {
-    visibility: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-*/
-
+/*Estilo para los elementos de formulario*/
 input { 
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box; 
@@ -92,33 +200,6 @@ input[type="text"], input[type="email"], input[type="password"] {
     display: block;
     width: 100%;
     height: 3rem;
-}
-
-.lpd {
-    font-size: 0.7rem;
-}
-
-#lpd {
-    display: inline;
-    margin:0 0.5rem 0 0;
-}
-
-header figure {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-}
-
-header img {
-  width: 150%;
-  max-width: 100%;
-}
-
-header figcaption {
-  font-family: 'Noto Serif', serif;    
-  padding-left: 1rem;
-  font-size: 2rem;
 }
 
 button, .button {
@@ -141,120 +222,68 @@ button:hover, .button:hover{
         margin: 2rem 0;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
 
-footer {
-    font-size: 0.8rem;
-}
+/*Estilos específicos para página home: index.html*/
+/*..............................................................................................................*/
 
-footer a {
- color: rgb(255, 255, 255);    
-}
-
-footer a:hover {
- color: rgb(155, 23, 0);    
-}
-
-footer ul {
-    list-style: none;
-    margin: 2rem 0 2rem 0;
-    padding-left: 0;
-}
-
-footer p {
-    font-size: 0.8rem;
-    margin: 0.4rem 0;
-}
-
-#subir {
-    align-self: flex-end; 
-    margin-right: 1rem;
-}
-
-footer li {
-    margin: 0.3rem 0;
-}
-
-
-nav ul {
-    padding: 0;
-	list-style: none;
-    margin: 1rem 0
-}
-
-nav li {
+/*Estilos para la sección "comfunciona". Se utiliza selector de id al ser un elemento que no se repite en la web*/
+#comfunciona {
     text-align: center;
-	list-style: none;
-    font-weight: 700;
-    margin: .5rem 0;
 }
 
-#menu_sessions {
-    display: grid;
-    grid-template-columns: minmax(10rem,1fr);
+#comfunciona img{
+    width: 12rem;
 }
 
-#menu_sessions nav li {
+/*Estilo del formulario para unirse al club*/
+#formulari {
     text-align: left;
-    font-weight: normal;
-    margin: 0.3rem 0;
+    font-size: 1.3rem;
+}
+
+/*Estilo párrafo lpd*/
+.lpd {
+    font-size: 0.7rem;
+}
+
+/*Estilo checkbox lpd*/
+#lpd {
+    display: inline;
+    margin:0 0.5rem 0 0;
 }
 
 
-nav a {
-    color: rgb(28, 28, 28);
-}
+/*Estilos propios de la página clubs-tematics.html*/
+/*.............................................................................*/
 
-nav a:active {
-    text-decoration: underline;
-    font-weight: 700;
-}
-
-nav a:hover {
-    color: rgba(28, 28, 28, 0.5);
-}
-
-header figcaption .bold {
-    font-weight: 700;
-}
-
-header figcaption .cursiva {
-    font-style: italic;
-    color: rgb(155, 23, 0);
-}
-
-header a:hover .bold {
-    color: rgba(28, 28, 28, 0.5);
-}
-
-header a:hover .cursiva {
-    color: rgba(155, 23, 0, 0.5);
-}
-
-.maxwidth {
-    line-height: 1.5rem;
-}
-
-.center {
-    text-align: center;
-}
-
-.red {
-    color: rgb(155, 23, 0);
-    font-size: 0.9rem;
-    letter-spacing: 0.1rem;
-}
-
-.selected {
-    font-style: italic;
-}
-
+/*Se utiliza el id "llistaclubs para trabajar con el listado de clubs temáticos*/
+/*Estilo de la lista*/
 #llistaclubs li {
     list-style: none;
     margin-bottom: 2rem;
+}
+
+/*Definimos el estilo de los párrafos*/
+#llistaclubs p {
+    text-align: left;
+}
+
+/*Estilo enlace de los párrafos. El 2020 veurem...*/
+main li p a {
+    color:rgb(155, 23, 0)
+}
+
+main li p a:hover {
+    color:rgba(155, 23, 0, 0.5)
+}
+
+/*Tamaño, margins y figcaption de las imágenes*/
+#llistaclubs figure {
+    margin: 1rem 0;
+}
+
+#llistaclubs img {
+    max-width: 100%;
 }
 
 #llistaclubs figcaption{
@@ -262,65 +291,8 @@ header a:hover .cursiva {
     font-size: 1.3rem;
 }
 
-#llistaclubs p {
-    text-align: left;
-}
-
-#llistatsessions ul {
-    margin:0;
-    padding: 0;
-}
-
-
-#llistatsessions li {
-    list-style: none;
-    margin: 1rem 19%;
-    background-color: white;
-}
-
-#llistatsessions img {
-      width: 100%;
-}
-
-#llistatsessions figure {
-    background-color: white;
-    margin: 0;
-}
-
-#llistatsessions p {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0.2rem 0 .2rem 0.4rem;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-a img:hover{
-    opacity: 0.5;
-}
-
-dt {
-    font-weight: 700;
-    border-width: 0.1rem;
-    border-color:  rgb(28, 28, 28);
-    border-style: solid hidden hidden;
-}
-
-dd p {
-   margin: 0 0.3rem; 
-}
-
-#detallsessio  section > p {
-    text-align: justify;
-}
-
-.container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-}
-
-#llistaclubs figcaption::before,  #llistatsessions h3::before {
+/*Formato de puntos rojos antes del texto del figcaption*/
+#llistaclubs figcaption::before {
     color: rgb(155, 23, 0);
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
@@ -331,92 +303,184 @@ dd p {
     content: "••••••";
 }
 
+/*Estilos para la página sessions-2020.html*/
+/*..............................................................................................*/
+
+/*Se utiliza el id "menu_sessions" para identificar la sección con el menu y listado de sesiones*/
+/*Estilo para el menú de navegación de sesiones*/
+#menu_sessions nav li {
+    text-align: left;
+    font-weight: normal;
+    margin: 0.3rem 0;
+}
+
+/*Se utiliza el id "llistatsessions" para identificar el bloque que contiene la lista de sessiones por club*/
+/*Formato de la lista para mostrar la lista de sesiones por club*/
+#llistatsessions ul {
+    margin:0;
+    padding: 0;
+}
+
+#llistatsessions li {
+    list-style: none;
+    margin: 1rem 19%;
+    background-color: white;
+}
+
+/*Formato de las imágenes de carteleras para el listado de sesiones*/
+#llistatsessions figure {
+    background-color: white;
+    margin: 0;
+}
+
+#llistatsessions img {
+      width: 100%;
+}
+
+/*Formato del texto del listado de sesiones*/
+#llistatsessions p {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0.3rem 0 .6rem 0.4rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/*Formato de h3 de lista sessiones para mostrar puntos rojos*/
+#llistatsessions h3::before {
+    color: rgb(155, 23, 0);
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    margin-right: 1rem;
+}
+
+
 #llistatsessions h3::before {
     content: "•••";
 }
 
 
-/* Then style the iframe to fit in the container div with full height and width */
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border:none;
+/*Estilos propios de la página: detall-sessio.html*/
+/*...............................................................................................*/
+/*El bloque utilizado para mostrar la información relativa a la sesión tiene un id: detallsessio */
+
+/*Parrafos con alineación justificada*/
+#detallsessio  section > p {
+    text-align: justify;
 }
 
-    footer li {
-        display: inline-block;
-    }
-    footer li:after {
-	    content: "•";
-	    margin: 0 0.7rem;
-    }
-    footer li:last-child:after {
-	    display: none;
-    }
+/*Contenedor del iframe para ajustar tamaño y posición*/
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
 
-    #fil li {
-        display: inline-block;
-        font-weight: normal;
-    }
-    #fil li::before {
-	    content: "/";
-	    margin: 0 0.7rem;
-    }
-    #fil li:last-child {
-        color: rgba(28, 28, 28, 0.5);
-    }
-    #fil li:first-child::before {
-	    display: none;
-    }
 
+/*Formato del iframe para ajustarse al container que lo contiene en height y width*/
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border:none;
+}
+
+/*Formato del hilo de Ariadna según enunciado*/
+#fil li {
+    display: inline-block;
+    font-weight: normal;
+}
+
+#fil li::before {
+    content: "/";
+    margin: 0 0.7rem;
+}
+
+#fil li:last-child {
+    color: rgba(28, 28, 28, 0.5);
+}
+
+#fil li:first-child::before {
+    display: none;
+}
+
+/*Formato de la imagen de Sergio Pablos en forma de círculo y con ajuste de texto*/
 #detallsessio img {
     border-radius: 50%;
     float: left;
+    /*Propiedad para definir como se ajusta el texto*/
     shape-outside: circle(50%);    
     margin-right: 2rem;
 }
 
+
+/*Ajuste de estilos para tamaño medio de pantalla: tablet, iPad, ... según estándares*/
+/*###################################################################################*/
+/*Punto de ruptura para 768px*/
+
 @media only screen and (min-width: 768px) {
 
+    /*Estilos comunes a todas las páginas*/
+    
+    /*Ajuste de tamaño del root a 1.2rem. Al usar en toda la web tamaños relativos al root se ajustan todos de manera automática*/
     html {
         font-size: 1.2rem;
     }
 
+    /*Cambio de formato del header. El flex pasa a ser por filas. Se utiliza justifi-content: space-between
+    Los elementos se reparten entre el espacio disponible dejando espacio entre ellos*/
     header {
         flex-direction: row;
         justify-content: space-between;
     }
 
+    /*Aumentamos el tamaño del padding del main para dejar más márgenes*/
     main {
         padding: 0 15% 3rem 15%;
     }
 
-    article {
-        margin-bottom: 0;
+    /*Cambiamos formato de las listas del footer*/
+    footer li {
+        display: inline;
     }
 
+    footer li:after {
+        content: "•";
+        margin: 0 0.7rem;
+    }
+
+    footer li:last-child:after {
+        display: none;
+    }
+
+    /*Cambio de orden del botón de inici de sesión. Jsutificado a la derecha*/
     #IniciaSessio {
         width: 15rem;
         text-align: right;
         order: 1;
     }
 
+    /*Estilos propios de la página: index.html*/
+
+    /*Los elementos de la sección como funciona se reparten en un grid de 2 columnas*/
     #comfunciona {
         text-align: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);        
     }
 
+    /*Ajustee de tamaño de los iconos de como funciona*/
     #comfunciona img {
         width: 9rem;
     }
 
-
+    /*Estilos propios de la página: clubs-tematics.html*/
+    /*Los clubs se muestran en un grid de dos columas de tamaño ajustado al espacio disponible*/
     #llistaclubs {
         display: grid;
         grid-template-columns: repeat(2, 1fr);        
@@ -424,17 +488,27 @@ dd p {
 
     }
 
-    .grupsessions {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);        
-        grid-column-gap: 1.5rem;  
-        grid-auto-rows: auto;
+    /*Elimnamos los márgenes de la lista de clubs*/
+    #llistaclubs li {
+        margin-bottom: 0;
     }
 
+    /*Cambio del número de puntos antes del figcaption*/
+    #llistaclubs figcaption::before {
+        content: "••••";
+    }
+
+
+    /*Estilos propios de la página: sessions-2020.html*/
+
+    /*Ajuste de la lista de sesiones con ligero margen a la izquierda*/
     #llistatsessions ul  {
         margin-left: 1rem;      
     }
 
+    /*Se utiliza display flex para ajustar el tamaño vertical de las listas de sesiones*/
+    /*Con justify-content el contenido se ajusta para llenar todo el espacio, de esta forma se consigue el efecto de que 
+    el título de las películas se coloque en la parte inferior del bloque*/
     #llistatsessions li  {
         display: flex;
         flex-direction: column;
@@ -442,83 +516,116 @@ dd p {
         margin: 0;
     }
 
-    #llistaclubs li {
-        margin-bottom: 0;
+
+    /*Cambio del número de puntos antes de la cabecera h3*/
+    #llistatsessions h3::before {
+        content: "•••••";
     }
 
-    #formulari {
+    /*Las sesiones por club se muestran en columnas de 3 sesiones*/
+    .grupsessions {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);        
+        grid-template-columns: repeat(3, 1fr);        
+        grid-column-gap: 1.5rem; 
+        /*Tamaño de altura de las filas  ajustado automáticamente a los elementos que la conforman*/
+        grid-auto-rows: auto;
     }
 
-#llistaclubs figcaption::before {
-    content: "••••";
 }
 
-#llistatsessions h3::before {
-    content: "•••••";
-}
-
-}
+/*Ajuste de estilos para tamaño escritorio de pantalla según estándares*/
+/*###################################################################################*/
+/*Punto de ruptura para 1224px*/
 
 @media only screen and (min-width: 1224px) {
 
-    #menu_sessions {
-        margin-top: 2rem;
-        border-width: 0.3rem;
-        border-color:  rgb(155, 23, 0);
-        border-style: dotted hidden hidden;
-        display: grid;
-        grid-template-columns: 0.25fr 1fr;
-        grid-gap: 2rem;
-    }    
+    /*Estilos para toda la página*/
 
+    /*Tamaño de cabecera h2 ajustado a enunciado*/
     h2 {
         font-size: 1.2rem;
     }
 
-    #menu_sessions nav li {
-        font-size: 0.8rem;
-    }
-
-    #llistatsessions {
-        margin-top: 1rem;
-    }
-
-
+    /*Menú de navegación del header horizontal, ajuste de márgenes*/
     header nav li {
-        display: inline-block;
+        display: inline;
         margin: 0 2rem;
     }
 
-
+    /*División del footer en dos columnas*/
     footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         text-align: left;        
     }
 
+    /*Alineación del texto de la segunda columna a la derecha*/
     footer div:nth-child(even) {
         text-align: right;
     }
 
-    #comfunciona {
-        grid-template-columns: repeat(4, 1fr);        
-    }
-
-    #llistaclubs {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);        
-    }
-
-    #formulari > div{
-        margin: 0 3rem;
-    }
-
+    /*Ajuste de márgenes de clase maxwith*/
     .maxwidth {
         margin: 0 15%;
     }
 
+    /*Estilos para index.html*/
+
+    /*Bloque Com funciona en cuatro columnas*/
+    #comfunciona {
+        grid-template-columns: repeat(4, 1fr);        
+    }
+
+    /*Formulario en forma de grid con dos columnas*/
+    /*Primera columna con el texto: Estem mirant la teva propera pel·lícula preferida ....*/
+    /*Segunda con el formulario*/
+    #formulari {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);        
+    }
+
+    /*Ajuste de los márgenes  de los div del formulario*/
+    #formulari > div{
+        margin: 0 3rem;
+    }
+
+    /*Estilos de la página: clubs-tematics.html*/
+
+    /*Lista de clubs en tres columnas*/
+    #llistaclubs {
+        grid-template-columns: repeat(3, 1fr);        
+    }
+
+    /*Estilos propios de la página: sessions-2020.html*/
+    #menu_sessions {
+        margin-top: 2rem;
+        /*Borde superior de puntos rojos*/
+        border-width: 0.3rem;
+        border-color:  rgb(155, 23, 0);
+        border-style: dotted hidden hidden;
+
+        /*Contenido en dos columnas*/
+        /*Primera columna con menú de navegación de clubs*/
+        /*Segunda columna lista de clubs y sesiones*/
+        display: grid;
+        grid-template-columns: 0.25fr 1fr;
+        grid-gap: 2rem;
+    }    
+
+    /*Reducción de tamaño del menú de navegación de clubs, ajustado a enunciado*/
+    #menu_sessions nav li {
+        font-size: 0.8rem;
+    }
+
+    /*Ajuste margen superior de los listados de sesiones por club*/
+    #llistatsessions {
+        margin-top: 1rem;
+    }
+
+    /*Estilos de la página: detall-sessio.html*/
+    /*División del contenido de la información de la sesión en dos columnas*/
+    /*Primera columna: Ficha técnica*/
+    /*Segunda columna: Información sobre la obra y autor*/
     #detallsessio {
         display: grid;
         grid-template-columns: 0.6fr 1fr;        
